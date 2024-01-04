@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte Carlo</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+
+    <!--
+    navr bar copied code starts from here 
+   -->
+
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="#!">Logo</a>
+            </div>
+            <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#!">Home</a>
+                    </li>
+                    <li>
+                        <a href="#!">About</a>
+                    </li>
+                    <li>
+                        <a href="#!">Services</a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="#!">Web Design</a>
+                            </li>
+                            <li>
+                                <a href="#!">Web Development</a>
+                            </li>
+                            <li>
+                                <a href="#!">Graphic Design</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#!">Portfolio</a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="#!">Web Design</a>
+                            </li>
+                            <li>
+                                <a href="#!">Web Development</a>
+                            </li>
+                            <li>
+                                <a href="#!">Graphic Design</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <!--
+    hero section code
+-->
+
+
+    <div class="container">
+        <img src="./images/prob.png" alt="Your Image">
+        <div class="text-container">
+            <h1 class="blah2">Monte Carlo simulator</h1>
+            <p class="blah">Get predicted variations in price based on a stock</p>
+        </div>
+    </div>
+
+
+    <!-- non copy pasted code starts from here -->
+
+
+
+    <div id="json-response">
+
+    </div>
+    <div class="image-container">
+
+    </div>
+    <div class="links">
+
+        <a href="http://127.0.0.1:5000/home/TSLA">
+            <button id="butt">Get Simulation for Tesla Stock Price</button>
+        </a>
+
+        <a href="http://127.0.0.1:5000/home/MCD">
+            <button id="butt">Get Simulation for Mac Donald Stock Price</button>
+        </a>
+
+        <a href="http://127.0.0.1:5000/home/META">
+            <button id="butt">Get Simulation for Meta stock Price</button>
+        </a>
+
+        <a href="http://127.0.0.1:5000/home/MSFT">
+            <button id="butt">Get Simulation for Microsoft Stock Price</button>
+        </a>
+
+    </div>
+
+    <p class="rand">
+        About Monte Carlo Simulator :
+    </p>
+    <div class="image-holder">
+        <img src="./images/simulator.png" alt="" class="photo">
+        <img src="./images/sim2.png" alt="" class="photo">
+        <div class="rand">example output</div>
+        <img src="./images/sim5.png" alt="">
+    </div>
+
+
+    <div class="tech-stack">
+        <h1>Our Tech Stack</h1>
+        <div class="tech-img">
+            <img src="./images/flask.png" alt="" class="img-tech">
+            <img src="./images/py.png" alt="" class="img-tech">
+            <img src="./images/matlab.png" alt="" class="img-tech">
+            <img src="./images/html.png" alt="" class="img-tech">
+            <img src="./images/css.png" alt="" class="img-tech">
+            <img src="./images/js.png" alt="" class="img-tech">
+        </div>
+    </div>
+
+
+    <div class="code-works">
+
+        <h2>How Our BackEnd works : </h2>
+
+        Fetching Stock Data:
+
+        It uses the yfinance library to download historical stock data for the specified company (companyName). <br />
+        Calculating Returns:
+
+        It calculates the logarithmic returns of the adjusted closing prices of the stock.<br />
+        Simulating Stock Prices:
+
+        It then generates multiple simulations of future stock prices using a Monte Carlo simulation. For each
+        simulation, it
+        generates random returns based on the mean (mu) and standard deviation (sigma) of the historical returns. It
+        then
+        calculates the simulated stock prices over a specified number of days (252 days in this case). <br />
+        Plotting Simulations:
+
+        The code uses matplotlib.pyplot to create a plot with each simulation represented by a line. The final adjusted
+        closing
+        price of the actual stock data is marked with a horizontal line (ax.axhline).<br />
+        Saving Plot to BytesIO Object:
+
+        The plot is saved as a PNG image in a BytesIO object (img_buf). BytesIO is like a file in memory.
+        Closing Plot:
+
+        The plot is closed to free up memory.<br />
+        Returning Image Data:
+
+        The BytesIO object containing the plot image is returned. This image data can be used to display the plot on a
+        web page
+        or in any other application.
+    </div>
+
+    <section id="contact">
+        <div class="sectionheader">
+            <h1>CONTACT</h1>
+        </div>
+        <article>
+            <p>Contact us to get your queries solved </p>
+
+            <label for="checkcontact" class="contactbutton">
+                <div class="mail"></div>
+            </label><input id="checkcontact" type="checkbox">
+
+            <form action="" method="post" class="contactform">
+                <p class="input_wrapper"><input type="text" name="contact_nom" value="" id="contact_nom"><label
+                        for="contact_nom">NAME</label></p>
+                <p class="input_wrapper"><input type="text" name="contact_email" value="" id="contact_email"><label
+                        for="contact_email">EMAIL</label></p>
+                <p class="input_wrapper"><input type="text" name="contact_sujet" value="" id="contact_sujet"><label
+                        for="contact_sujet">SUBJECT</label></p>
+                <p class="textarea_wrapper"><textarea name="contact_message" id="contact_message"></textarea></p>
+                <p class="submit_wrapper"><input type="submit" value="Send"></p>
+            </form>
+        </article>
+    </section>
+
+
+
+    <script src="./index.js"></script>
+    <script>
+        function openSimulation() {
+            window.location.href = "http://127.0.0.1:5000/home/TSLA";
+        }
+    </script>
+</body>
+
+</html>
